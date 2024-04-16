@@ -45,6 +45,25 @@ class AuthService{
         }
     }
 
+    async getCurrentUser(){
+        try {
+            return await this.account.get()
+        } catch (error) {
+            console.log("This is a appwrite error")
+        }
+
+        return null;
+    }
+    
+    // if you get any promise statement to execute than use await keyword
+    async logout(){
+        try {
+            await this.account.deleteSessions()
+        } catch (error) {
+            console.log("this is a error")
+        }
+    }
+
     
 }
 
