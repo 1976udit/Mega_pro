@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import {useForm} from 'react-hook-form'
 import {useNavigate} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
-import {service as authService} from '../appwrite/auth'
+import authService from '../appwrite/auth'
 import {login as authLogin} from '../store/authSlice'
-import {Logo} from './Logo'
-import {Input} from './input'
+import {Input,Logo} from './index'
 
-function login() {
+function Login() {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -86,4 +85,4 @@ function login() {
   )
 }
 
-export default login
+export default Login

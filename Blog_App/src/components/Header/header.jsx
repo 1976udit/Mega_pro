@@ -1,5 +1,5 @@
 import React from "react";
-import authService from "../../appwrite/auth";
+import store from "../../store/store";
 import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import Container from "../container/Container";
