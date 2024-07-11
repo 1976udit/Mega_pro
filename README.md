@@ -1,1 +1,1 @@
-It's a blog app in react.js and usinf backend as a service (Appwrite)
+It's a blog app in react.js, using backend as a service (Appwrite)
