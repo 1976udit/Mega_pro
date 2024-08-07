@@ -4,6 +4,7 @@ import {Provider, useDispatch} from 'react-redux'
 import authService from './appwrite/auth'
 import {login,logout} from './store/authSlice'
 import {Header,Footer} from './components/index'
+import { Router } from 'react-router-dom'
 
 function App() {
   // console.log(process.env.VITE_APPWRITE_URL) 
@@ -25,6 +26,7 @@ function App() {
   } , [])
 
   return loading ? (<h1>Loading....</h1>) : (
+    <Provider>
     <div className='bg-gray-400 min-h-screen mx-20 my-20'>
       <div className=''>
         <Header />
@@ -34,6 +36,7 @@ function App() {
         <Footer />
       </div>
     </div>
+    </Provider>
     
   )
 }
